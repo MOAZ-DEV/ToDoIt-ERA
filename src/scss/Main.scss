@@ -1,0 +1,162 @@
+@import "../public/fonts/Fonts.scss";
+.main {
+    height: auto;
+    width: 100%;
+
+    .nav {
+        height: 45px;
+        width: auto;
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        background: #0b0b0bcb;
+
+        position: relative;
+
+        .editTime {
+            font-size: 10px;
+            text-transform: uppercase;
+
+            opacity: .25;
+
+            position: absolute;
+            right: 50%;
+            transform: translateX(45%);
+
+            z-index: unset;
+        }
+        .btnsWrap {
+            height: 45px;
+            width: auto;
+
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 0px;
+
+            padding: 0 0;
+        }
+    }
+    .title {
+        width: auto;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        border-top: solid 0.25px #ffffff16;
+        background: #0b0b0bcb;
+        color: #fff;
+
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 16px;
+
+        input,
+        div[type="text"] {
+            height: 45px;
+            display: flex;
+
+            justify-content: center;
+            align-items: center;
+            padding: 0 unset;
+            &[placeholder]:empty:before {
+                content: attr("placeholder");
+                color: #555;
+            }
+        }
+    }
+    .codeMirror {
+        height: calc(100% - 90px);
+        width: auto;
+
+        display: flex;
+        flex-direction: column;
+
+        background: #0b0b0bcb;
+        border-top: solid 0.25px #ffffff16;
+
+        overflow: hidden auto;
+        color: rgba(255, 255, 255, 0.739);
+
+        padding: 0;
+
+        .cm-editor {
+            height: 100%;
+            width: auto;
+            padding: 45px;
+            background: transparent;
+
+            padding: 12px 0 0 0;
+        }
+        .cm-scroller {
+            width: 100%;
+            overflow-y: scroll;
+
+            &::-webkit-scrollbar {
+                width: 12px;
+            }
+
+            &::-webkit-scrollbar-track {
+                background: transparent;
+                border-radius: 0px;
+                border-left: solid 0.25px #ffffff0c;
+            }
+            &::-webkit-scrollbar-thumb {
+                background: #ffffff05;
+                border-radius: 0px;
+
+                transition: 0.25s linear;
+            }
+            &:hover {
+                &::-webkit-scrollbar-thumb {
+                    background: #ffffff0c;
+                }
+            }
+        }
+        .cm-cursor {
+            background: rgba(50, 64, 113, 0.576);
+            width: 5px;
+        }
+        .cm-content {
+            height: auto;
+        }
+        .cm-gutters {
+            font-size: 10px;
+            align-items: flex-end;
+            background: transparent;
+            opacity: 0.15;
+        }
+        .cm-contentt {
+            color: #fff;
+            opacity: 0.6;
+
+            font-size: 10px;
+            font-style: normal;
+            font-weight: 400;
+        }
+    }
+
+.blank {
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #0b0b0bcb;
+
+    
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+
+    color: #ffffff48;
+}
+}

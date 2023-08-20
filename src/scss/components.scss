@@ -1,0 +1,143 @@
+.iconBtn {
+    height: 45px;
+    width: 45px;
+
+    display: flex;
+    flex-direction: row;
+
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+    background-color: unset;
+
+    transition: background-color .15s ease;
+
+    cursor: pointer;
+
+    &:hover {
+        background-color: #ffffff16;
+    }
+
+    img {
+        height: 12px;
+        width: 12px;
+    }
+}
+.resizeKit {
+    
+    height: 100%;
+    width: 2px;
+
+
+
+    background: #ffffff00;
+    border-right: solid 0.25px #ffffff16;
+
+    z-index: 1000;
+    cursor: col-resize;
+    position: relative;
+
+    &::after {
+        position: absolute;
+        z-index: 10000;
+        top: 0;
+        -webkit-user-drag: element;
+
+        content: "";
+        height: 100%;
+        width: 5px;
+        transform: translateX(-5%);
+    }
+}
+.scrollBar {
+    &::-webkit-scrollbar {
+        width: 12px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: transparent;
+        border-radius: 0px;
+        border-left: solid 0.25px #ffffff0c;
+    }
+    &::-webkit-scrollbar-thumb {
+        background: #ffffff05;
+        border-radius: 0px;
+
+        transition: 0.25s linear;
+    }
+    &:hover {
+        &::-webkit-scrollbar-thumb {
+            background: #ffffff0c;
+        }
+    }
+}
+input, div[type="text"]  {
+    height: 45px;
+    width: clamp(100px, 1000px, 100%);
+
+    color: #fff;
+
+    font-size: 13px;
+
+    padding: 0 14px;
+
+    background-color: unset;
+
+    transition: background-color .15s ease;
+
+    &:hover {
+        background-color: #ffffff16;
+    }
+}
+.alertPop {
+    display: flex;
+justify-content: center;
+align-items: center;
+
+    height: fit-content;
+    width: clamp(125px, 10%, 360px);
+
+    padding: 7px 16px;
+
+    position: absolute;
+
+    bottom: 0;
+    left: 50%;
+
+    z-index: 10000;
+
+    transform: translate(-50%, -56%);
+
+
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+
+    border-radius: 2px;
+    background: #ffffffc9;
+    color: #000;
+
+    opacity: 0;
+
+    animation: pop 5s ease;
+}
+@keyframes pop {
+    0% {
+        opacity: 0;
+        bottom: -100%;
+    } 25% {
+        opacity: 0;
+        bottom: -100%;
+    }50% {
+        opacity: 1;
+        bottom: 0;
+    }95% {
+        opacity: 1;
+
+    }100% {
+        opacity: 0;
+
+    }
+}
